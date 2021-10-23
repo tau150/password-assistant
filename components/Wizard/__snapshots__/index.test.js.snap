@@ -74,29 +74,29 @@ Object {
         <div
           class="css-h94677"
         >
-          <div>
+          <p>
             Step 1
-          </div>
+          </p>
+          <footer
+            class="css-1ry2npb"
+          >
+            <button
+              aria-label="prev-button"
+              class="chakra-button css-1t0rcyz"
+              disabled=""
+              type="button"
+            >
+              Cancel
+            </button>
+            <button
+              aria-label="next-button"
+              class="chakra-button css-1on1g6e"
+              type="button"
+            >
+              Next
+            </button>
+          </footer>
         </div>
-        <footer
-          class="css-mynujt"
-        >
-          <button
-            aria-label="prev-button"
-            class="chakra-button css-1t0rcyz"
-            disabled=""
-            type="button"
-          >
-            Cancel
-          </button>
-          <button
-            aria-label="next-button"
-            class="chakra-button css-1on1g6e"
-            type="button"
-          >
-            Next
-          </button>
-        </footer>
       </div>
     </div>
   </body>,
@@ -140,29 +140,29 @@ Object {
       <div
         class="css-h94677"
       >
-        <div>
+        <p>
           Step 1
-        </div>
+        </p>
+        <footer
+          class="css-1ry2npb"
+        >
+          <button
+            aria-label="prev-button"
+            class="chakra-button css-1t0rcyz"
+            disabled=""
+            type="button"
+          >
+            Cancel
+          </button>
+          <button
+            aria-label="next-button"
+            class="chakra-button css-1on1g6e"
+            type="button"
+          >
+            Next
+          </button>
+        </footer>
       </div>
-      <footer
-        class="css-mynujt"
-      >
-        <button
-          aria-label="prev-button"
-          class="chakra-button css-1t0rcyz"
-          disabled=""
-          type="button"
-        >
-          Cancel
-        </button>
-        <button
-          aria-label="next-button"
-          class="chakra-button css-1on1g6e"
-          type="button"
-        >
-          Next
-        </button>
-      </footer>
     </div>
   </div>,
   "debug": [Function],

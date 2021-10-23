@@ -1,15 +1,35 @@
 import { render } from '../../test-helpers/index'
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+
+import WizardFooter from './WizardFooter';
 import { useStepsWizard } from '../../contexts/stepWizardContext';
 
 import Wizard from './index'
 
+
+function StepOne(){
+  return (
+    <>
+      <p>Step 1</p>
+      <WizardFooter />
+    </>
+  )
+}
+
+function StepTwo(){
+  return (
+    <>
+      <p>Step 2</p>
+      <WizardFooter />
+    </>
+  )
+}
 function renderWizard() {
   return (
     <Wizard>
-      <div>Step 1</div>
-      <div>Step 2</div>
+      <StepOne />
+      <StepTwo />
     </Wizard>
   )
 }
