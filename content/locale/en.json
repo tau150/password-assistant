@@ -1,1 +1,16 @@
-{}
+{
+  "step1Title": "Create your Password Manager",
+  "descSave": "Save here all your passwords, data, or any information, forget paper notes and unprotected applications",
+  "descCreate": "Creá tu clave maestra: solo tu podrás acceder a tus secretos con ella",
+  "howWorksTitle": "How it works",
+  "howWorksDesc" : "First, you must create a different password for your electronic belongings. You will not be able to recover your password, so remember it well.",
+  "dataToSaveTitle": "What data can you save",
+  "dataToSaveDesc": "For example, the number of your card, the PIN and PUK of your mobile phone, the serial number of one of your devices or any information that you need to have in a safe place.",
+  "cancel": "Cancel",
+  "next": "Next",
+  "language": "Language",
+  "welcomeTitle": "Welcome to your OpenClose Account",
+  "howToContinue": "How to continue",
+  "howToContinueDesc": "In order to continue you must be over 18 years old, so you will have to confirm it with the check below. Then you must choose your master password that meets the minimum security requirements, confirm it and, if you wish, indicate a recovery track.",
+  "ageConfirmation": "I confirm that I am at least 18 years old"
+}

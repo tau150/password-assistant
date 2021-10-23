@@ -5,7 +5,8 @@ const theme = extendTheme({
     brand: {
       primary: "#FF0049",
       secondary: "#002B45",
-      terciary: "#FFF1E5"
+      terciary: "#FFF1E5",
+      accent: '#788f9d'
     },
   },
 })
