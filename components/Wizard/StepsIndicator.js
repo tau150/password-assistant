@@ -1,7 +1,17 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
-import { Badge, Box, Flex } from '@chakra-ui/react'
+import { Badge, Box, Flex, Icon } from '@chakra-ui/react'
+import { Check } from 'react-feather'
 
+function getBgColor(activeStep, number){
+  if(activeStep === number){
+    return "brand.secondary"
+  }
+  if(activeStep > number){
+    return "red.500"
+  }
+  return 'brand.accent'
+}
 function StepsIndicator({stepsNumber, activeStep}){
   const arrayOfSteps = Array.from(Array(stepsNumber), (_, idx) => idx + 1)
 
@@ -9,7 +19,17 @@ function StepsIndicator({stepsNumber, activeStep}){
     <Flex alignItems='center' position='relative'>
       {arrayOfSteps.map(number => (
         <Box key={number} position='relative'>
-          {number !== stepsNumber && <Box left='20px' top='calc(50% - 2.5px)' zIndex='-1' position='absolute' as='span' w='100px' h='5px' bgColor='brand.accent'/>}
+          {number !== stepsNumber && (
+            <Box
+              left='20px'
+              top='calc(50% - 2.5px)'
+              zIndex='-1'
+              position='absolute'
+              as='span'
+              w='100px'
+              h='5px'
+              bgColor={(number !== stepsNumber && activeStep > number ) ? 'red.500' : 'brand.accent'}
+            />)}
           <Badge
             fontSize='18px'
             w={activeStep === number ? "40px" : '30px'}
@@ -19,7 +39,7 @@ function StepsIndicator({stepsNumber, activeStep}){
             justifyContent='center'
             alignItems='center'
             color='white'
-            bgColor={activeStep === number ? "brand.secondary" : 'brand.accent'}
+            bgColor={getBgColor(activeStep, number)}
             boxShadow={activeStep === number ? "lg" : 'initial'}
             role="status"
             aria-label={`${number} ${activeStep === number ? 'is active' : ''}`}
@@ -27,7 +47,7 @@ function StepsIndicator({stepsNumber, activeStep}){
             position='relative'
             zIndex={3}
             key={number}>
-              {number}
+              {activeStep > number ? <Icon as={Check} /> : number}
           </Badge>
         </Box>))}
 

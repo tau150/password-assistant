@@ -4,49 +4,34 @@ import { Box, Flex } from '@chakra-ui/react'
 
 import { StepWizardContext } from '../../contexts/stepWizardContext'
 import StepsIndicator from './StepsIndicator'
-import WizardFooter from './WizardFooter'
-
-function Wizard(props){
-  const { children, startStep } = props
-
-  const [currentStep, setCurrentStep] = React.useState(startStep)
+function Wizard({children}){
+  const [currentStep, setCurrentStep] = React.useState(0)
   const [isStepDisabled, setIsStepDisabled] = React.useState(false)
 
   const stepsNumberBasedOnChildren = React.Children.count(children);
 
-  const handleNextStep = () => {
+  const handleNextStep = async () => {
     setCurrentStep( prev => prev += 1)
   }
 
-  const handlePrevStep = () => {
+  const handlePrevStep = async () => {
     setCurrentStep( prev => prev -= 1)
   }
 
   const arrayOfChildren = React.Children.toArray(children);
   const currentContent = arrayOfChildren[currentStep];
+  const isLastStep = currentStep + 1 === stepsNumberBasedOnChildren
 
   const value = {
     currentStep,
+    numberOfSteps: stepsNumberBasedOnChildren,
     setCurrentStep,
-    setIsStepDisabled
+    setIsStepDisabled,
+    isStepDisabled,
+    handleNextStep,
+    handlePrevStep,
+    isLastStep
   }
-
-  React.useEffect(() => {
-    const listener = event => {
-      if (event.code === "Enter" || event.code === "NumpadEnter") {
-        event.preventDefault();
-        if(!isStepDisabled){
-          handleNextStep()
-        }
-      }
-    };
-    document.addEventListener("keydown", listener);
-    return () => {
-      document.removeEventListener("keydown", listener);
-    };
-  }, [isStepDisabled]);
-
-  const isPrevDisabled = currentStep === 0
 
   return (
     <StepWizardContext.Provider value={value}>
@@ -57,22 +42,14 @@ function Wizard(props){
         <Box p='4'>
           {currentContent}
         </Box>
-        <WizardFooter isPrevDisabled={isPrevDisabled} handlePrevStep={handlePrevStep} isStepDisabled={isStepDisabled} handleNextStep={handleNextStep}/>
       </Box>
     </StepWizardContext.Provider>
   )
 }
 
 
-Wizard.defaultProps = {
-  startStep: 0
-}
-
-
 Wizard.propTypes = {
   children: PropTypes.node,
-  stepsNumber: PropTypes.number,
-  startStep: PropTypes.number
 }
 
 export default Wizard

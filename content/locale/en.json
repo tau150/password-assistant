@@ -12,5 +12,22 @@
   "welcomeTitle": "Welcome to your OpenClose Account",
   "howToContinue": "How to continue",
   "howToContinueDesc": "In order to continue you must be over 18 years old, so you will have to confirm it with the check below. Then you must choose your master password that meets the minimum security requirements, confirm it and, if you wish, indicate a recovery track.",
-  "ageConfirmation": "I confirm that I am at least 18 years old"
+  "ageConfirmation": "I confirm that I am at least 18 years old",
+  "createPasswordLabel": "Create your Master Password",
+  "confirmPasswordLabel": "Repeat your Master Password",
+  "helpPasswordPh": "Enter a clue",
+  "helpPasswordLabel": "Create your clue to remember your password (optional)",
+  "helpPasswordInfo": "This will help you to remember your password",
+  "minValidation": "Must contain at least {number} characters",
+  "maxValidation": "Must contain maximum {number} characters",
+  "leastUpper": "Must at least one upper characters",
+  "leastSymbol": "Must contain at least one symbol",
+  "equalValidation": "The field does not match",
+  "backToManager": "Back to Password Manager",
+  "access": "Access",
+  "passwordCreated": "Your Password was created",
+  "passwordError": "There was an error",
+  "passwordCreatedDesc": "You can enjoy your Password Manager",
+  "passwordErrorDesc": "We could not modified your Master Password, try again later"
+
 }

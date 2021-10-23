@@ -12,5 +12,21 @@
   "welcomeTitle": "Bienvenido a tu Cuenta corriente OpenClose",
   "howToContinue": "Como continuar",
   "howToContinueDesc": "Para poder continuar debes ser mayor de 18 años, asi que tendras que confirmarlo con el check que esta debajo. Luego debes elegir tu contraseña maestra que cumpla con los requerimientos de seguridad mínimos, confirmarla y, si lo deseas indicar una pista de recuperación.",
-  "ageConfirmation": "Confirmo que soy mayor de 18 años"
+  "ageConfirmation": "Confirmo que soy mayor de 18 años",
+  "createPasswordLabel": "Creá tu Contraseña Maestra",
+  "confirmPasswordLabel": "Repite tu Contraseña Maestra",
+  "helpPasswordPh": "Introduce una pista",
+  "helpPasswordLabel": "Crea tu pista para recordar tu contraseña (opcional)",
+  "helpPasswordInfo": "Esto te ayudará a recordar tu password",
+  "minValidation": "Debe contener al menos {number} caracteres",
+  "maxValidation": "Debe contener como máximo {number} caracteres",
+  "leastUpper": "Debe contener al menos un caracter en mayúscula",
+  "leastSymbol": "Debe contener al menos un símbolo",
+  "equalValidation": "El campo no coincide",
+  "backToManager": "Volver a Password Manager",
+  "access": "Acceder",
+  "passwordCreated": "Tu Password Manager ya está creado",
+  "passwordError": "Ha habido un error",
+  "passwordCreatedDesc": "You can enjoy your Password Manager",
+  "passwordErrorDesc": "No hemos podido modificar tu Clave Maestra, inténtalo más tarde"
 }
