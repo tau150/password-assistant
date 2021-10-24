@@ -1,0 +1,384 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Information Intro test renders Information Intro 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body
+    class="chakra-ui-light"
+  >
+    <div
+      id="chakra-toast-portal"
+    >
+      <ul
+        id="chakra-toast-manager-top"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;"
+      />
+      <ul
+        id="chakra-toast-manager-top-left"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
+      />
+      <ul
+        id="chakra-toast-manager-top-right"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
+      />
+      <ul
+        id="chakra-toast-manager-bottom-left"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
+      />
+      <ul
+        id="chakra-toast-manager-bottom"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;"
+      />
+      <ul
+        id="chakra-toast-manager-bottom-right"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
+      />
+    </div>
+    <div>
+      <div
+        class="css-l50gwe"
+      >
+        <header
+          class="css-62ow20"
+        >
+          <div
+            class="css-14s4iyf"
+          >
+            <div
+              class="css-79elbk"
+            >
+              <span
+                aria-label="1 is active"
+                class="chakra-badge css-1aiadu4"
+                role="status"
+              >
+                1
+              </span>
+            </div>
+          </div>
+        </header>
+        <div
+          class="css-h94677"
+        >
+          <section
+            class="css-0"
+          >
+            <h1
+              class="chakra-heading css-xjra6q"
+            >
+              Welcome to your OpenClose Account
+            </h1>
+            <article
+              class="css-ejhs3n"
+            >
+              <h2
+                class="chakra-heading css-1n7pa12"
+              >
+                Create your Password Manager
+              </h2>
+              <div
+                class="css-j02tnc"
+              >
+                <div
+                  class="css-13i0eth"
+                >
+                  <img
+                    alt="test"
+                    src=""
+                  />
+                  <p
+                    class="chakra-text css-1hrwr3f"
+                  >
+                    Save here all your passwords, data, or any information, forget paper notes and unprotected applications
+                  </p>
+                </div>
+                <div
+                  class="css-13i0eth"
+                >
+                  <img
+                    alt="test"
+                    src=""
+                  />
+                  <p
+                    class="chakra-text css-1hrwr3f"
+                  >
+                    reate your master password: only you can access your secrets with it
+                  </p>
+                </div>
+              </div>
+              <h3
+                class="chakra-heading css-14dj72c"
+              >
+                How it works
+              </h3>
+              <p
+                class="chakra-text css-1pnzxoz"
+              >
+                First, you must create a different password for your electronic belongings. You will not be able to recover your password, so remember it well.
+              </p>
+              <h3
+                class="chakra-heading css-14dj72c"
+              >
+                What data can you save
+              </h3>
+              <p
+                class="chakra-text css-1pnzxoz"
+              >
+                For example, the number of your card, the PIN and PUK of your mobile phone, the serial number of one of your devices or any information that you need to have in a safe place.
+              </p>
+              <h3
+                class="chakra-heading css-14dj72c"
+              >
+                How to continue
+              </h3>
+              <p
+                class="chakra-text css-1pnzxoz"
+              >
+                In order to continue you must be over 18 years old, so you will have to confirm it with the check below. Then you must choose your master password that meets the minimum security requirements, confirm it and, if you wish, indicate a recovery track.
+              </p>
+              <label
+                class="chakra-checkbox css-h4lg0k"
+              >
+                <input
+                  aria-label="age"
+                  class="chakra-checkbox__input"
+                  style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                  type="checkbox"
+                  value=""
+                />
+                <span
+                  aria-hidden="true"
+                  class="chakra-checkbox__control css-xxkadm"
+                />
+                <span
+                  class="chakra-checkbox__label css-1sgc0qu"
+                >
+                  I confirm that I am at least 18 years old
+                </span>
+              </label>
+            </article>
+            <footer
+              class="css-1ry2npb"
+            >
+              <button
+                aria-label="prev-button"
+                class="chakra-button css-1t0rcyz"
+                disabled=""
+                type="button"
+              >
+                Cancel
+              </button>
+              <button
+                aria-label="next-button"
+                class="chakra-button css-1t0rcyz"
+                disabled=""
+                type="button"
+              >
+                Next
+              </button>
+            </footer>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="css-l50gwe"
+    >
+      <header
+        class="css-62ow20"
+      >
+        <div
+          class="css-14s4iyf"
+        >
+          <div
+            class="css-79elbk"
+          >
+            <span
+              aria-label="1 is active"
+              class="chakra-badge css-1aiadu4"
+              role="status"
+            >
+              1
+            </span>
+          </div>
+        </div>
+      </header>
+      <div
+        class="css-h94677"
+      >
+        <section
+          class="css-0"
+        >
+          <h1
+            class="chakra-heading css-xjra6q"
+          >
+            Welcome to your OpenClose Account
+          </h1>
+          <article
+            class="css-ejhs3n"
+          >
+            <h2
+              class="chakra-heading css-1n7pa12"
+            >
+              Create your Password Manager
+            </h2>
+            <div
+              class="css-j02tnc"
+            >
+              <div
+                class="css-13i0eth"
+              >
+                <img
+                  alt="test"
+                  src=""
+                />
+                <p
+                  class="chakra-text css-1hrwr3f"
+                >
+                  Save here all your passwords, data, or any information, forget paper notes and unprotected applications
+                </p>
+              </div>
+              <div
+                class="css-13i0eth"
+              >
+                <img
+                  alt="test"
+                  src=""
+                />
+                <p
+                  class="chakra-text css-1hrwr3f"
+                >
+                  reate your master password: only you can access your secrets with it
+                </p>
+              </div>
+            </div>
+            <h3
+              class="chakra-heading css-14dj72c"
+            >
+              How it works
+            </h3>
+            <p
+              class="chakra-text css-1pnzxoz"
+            >
+              First, you must create a different password for your electronic belongings. You will not be able to recover your password, so remember it well.
+            </p>
+            <h3
+              class="chakra-heading css-14dj72c"
+            >
+              What data can you save
+            </h3>
+            <p
+              class="chakra-text css-1pnzxoz"
+            >
+              For example, the number of your card, the PIN and PUK of your mobile phone, the serial number of one of your devices or any information that you need to have in a safe place.
+            </p>
+            <h3
+              class="chakra-heading css-14dj72c"
+            >
+              How to continue
+            </h3>
+            <p
+              class="chakra-text css-1pnzxoz"
+            >
+              In order to continue you must be over 18 years old, so you will have to confirm it with the check below. Then you must choose your master password that meets the minimum security requirements, confirm it and, if you wish, indicate a recovery track.
+            </p>
+            <label
+              class="chakra-checkbox css-h4lg0k"
+            >
+              <input
+                aria-label="age"
+                class="chakra-checkbox__input"
+                style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                type="checkbox"
+                value=""
+              />
+              <span
+                aria-hidden="true"
+                class="chakra-checkbox__control css-xxkadm"
+              />
+              <span
+                class="chakra-checkbox__label css-1sgc0qu"
+              >
+                I confirm that I am at least 18 years old
+              </span>
+            </label>
+          </article>
+          <footer
+            class="css-1ry2npb"
+          >
+            <button
+              aria-label="prev-button"
+              class="chakra-button css-1t0rcyz"
+              disabled=""
+              type="button"
+            >
+              Cancel
+            </button>
+            <button
+              aria-label="next-button"
+              class="chakra-button css-1t0rcyz"
+              disabled=""
+              type="button"
+            >
+              Next
+            </button>
+          </footer>
+        </section>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

@@ -1,6 +1,17 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
-import { Box, Heading, Text, Stack, FormControl, FormLabel, Input, Tooltip, Icon, FormHelperText } from '@chakra-ui/react'
+import {
+  Box,
+  Heading,
+  Text,
+  Stack,
+  FormControl,
+  FormLabel,
+  Input,
+  Tooltip,
+  Icon,
+  FormHelperText
+} from '@chakra-ui/react'
 import { FormattedMessage, useIntl } from 'react-intl'
 import { Info } from "react-feather";
 

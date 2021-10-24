@@ -4,11 +4,11 @@ const regexpAtLeastOneUpperLetter = /^(?=.*[A-Z])/;
 const regexAtLeastOneSymbol = /(?=.*\W)/;
 
 const validationsMap = {
-  [validationKeys.MIN] : (value, reference) => value.length < reference,
-  [validationKeys.MAX] : (value, reference) => value.length > reference,
-  [validationKeys.ONE_UPPER]: (value) => !regexpAtLeastOneUpperLetter.test(value),
-  [validationKeys.ONE_SYMBOL]: (value) => !regexAtLeastOneSymbol.test(value),
-  [validationKeys.EQUAL]: (value, reference) => value !== reference
+  [validationKeys.MIN] : (value, reference) => value.length > reference,
+  [validationKeys.MAX] : (value, reference) => value.length < reference,
+  [validationKeys.ONE_UPPER]: (value) => regexpAtLeastOneUpperLetter.test(value),
+  [validationKeys.ONE_SYMBOL]: (value) => regexAtLeastOneSymbol.test(value),
+  [validationKeys.EQUAL]: (value, reference) => value === reference
 }
 
 export function validateInput(value, validations){
@@ -16,7 +16,7 @@ export function validateInput(value, validations){
   const validTypes = []
 
   validations.forEach( validation => {
-    if(validationsMap[validation.type](value, validation?.reference)){
+    if(!validationsMap[validation.type] || !validationsMap[validation.type](value, validation?.reference)){
       errors.push(validation.type)
     }else{
       validTypes.push(validation.type)

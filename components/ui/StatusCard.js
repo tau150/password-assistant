@@ -11,10 +11,10 @@ function StatusCard({variant, title, body}){
   }
 
   return (
-    <Flex h='120px' alignItems='center'  border='1px' boxShadow='md' borderColor='gray.200' justifyContent='center'>
+    <Flex h='120px' p={8} alignItems='center'  border='1px' boxShadow='md' borderColor='gray.200' justifyContent='center'>
      <Icon fontSize={32} as={icon[variant]} />
     <Box ml={[4, 8]}>
-      <Heading as='h4' fontSize={[18, 36]}>{title}</Heading>
+      <Heading as='h4' fontSize={[18, 24]}>{title}</Heading>
       <Text fontSize={[12, 18]}>{body}</Text>
     </Box>
    </Flex>

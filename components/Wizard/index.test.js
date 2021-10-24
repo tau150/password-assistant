@@ -25,7 +25,7 @@ function StepTwo(){
     </>
   )
 }
-function renderWizard() {
+function WizardWrapper() {
   return (
     <Wizard>
       <StepOne />
@@ -35,11 +35,11 @@ function renderWizard() {
 }
 describe('Steps Indicator test', () => {
   test('Should match snapshot', () => {
-    expect(render(renderWizard())).toMatchSnapshot()
+    expect(render(<WizardWrapper/>)).toMatchSnapshot()
   })
 
   test('Should show the correct step on the screen navigating among them', () => {
-    render(renderWizard())
+    render(<WizardWrapper/>)
 
     expect(screen.getByText(/step 1/i)).toBeInTheDocument()
 
@@ -55,7 +55,7 @@ describe('Steps Indicator test', () => {
   })
 
   test('Should move to the next step with the Enter button when the the step is not disabled', () => {
-    render(renderWizard())
+    render(<WizardWrapper/>)
 
     expect(screen.getByText(/step 1/i)).toBeInTheDocument()
     userEvent.keyboard('{Enter}')

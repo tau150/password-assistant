@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Wizard Footer test Should match snapshot 1`] = `
+exports[`Status Card test renders Status Card 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body
@@ -36,98 +36,90 @@ Object {
     </div>
     <div>
       <div
-        class="css-l50gwe"
+        class="css-dq00q9"
       >
-        <header
-          class="css-62ow20"
+        <svg
+          class="chakra-icon css-qelcgd"
+          focusable="false"
+          viewBox="0 0 24 24"
         >
-          <div
-            class="css-14s4iyf"
+          <g
+            stroke="currentColor"
+            stroke-width="1.5"
           >
-            <div
-              class="css-79elbk"
-            >
-              <span
-                aria-label="1 is active"
-                class="chakra-badge css-1aiadu4"
-                role="status"
-              >
-                1
-              </span>
-            </div>
-          </div>
-        </header>
+            <path
+              d="M9,9a3,3,0,1,1,4,2.829,1.5,1.5,0,0,0-1,1.415V14.25"
+              fill="none"
+              stroke-linecap="round"
+            />
+            <path
+              d="M12,17.25a.375.375,0,1,0,.375.375A.375.375,0,0,0,12,17.25h0"
+              fill="currentColor"
+              stroke-linecap="round"
+            />
+            <circle
+              cx="12"
+              cy="12"
+              fill="none"
+              r="11.25"
+              stroke-miterlimit="10"
+            />
+          </g>
+        </svg>
         <div
-          class="css-h94677"
+          class="css-1t4in65"
         >
-          <footer
-            class="css-1ry2npb"
-          >
-            <button
-              aria-label="prev-button"
-              class="chakra-button css-1t0rcyz"
-              disabled=""
-              type="button"
-            >
-              Cancel
-            </button>
-            <button
-              aria-label="next-button"
-              class="chakra-button css-1on1g6e"
-              type="button"
-            >
-              Next
-            </button>
-          </footer>
+          <h4
+            class="chakra-heading css-7n4zlk"
+          />
+          <p
+            class="chakra-text css-13wg21h"
+          />
         </div>
       </div>
     </div>
   </body>,
   "container": <div>
     <div
-      class="css-l50gwe"
+      class="css-dq00q9"
     >
-      <header
-        class="css-62ow20"
+      <svg
+        class="chakra-icon css-qelcgd"
+        focusable="false"
+        viewBox="0 0 24 24"
       >
-        <div
-          class="css-14s4iyf"
+        <g
+          stroke="currentColor"
+          stroke-width="1.5"
         >
-          <div
-            class="css-79elbk"
-          >
-            <span
-              aria-label="1 is active"
-              class="chakra-badge css-1aiadu4"
-              role="status"
-            >
-              1
-            </span>
-          </div>
-        </div>
-      </header>
+          <path
+            d="M9,9a3,3,0,1,1,4,2.829,1.5,1.5,0,0,0-1,1.415V14.25"
+            fill="none"
+            stroke-linecap="round"
+          />
+          <path
+            d="M12,17.25a.375.375,0,1,0,.375.375A.375.375,0,0,0,12,17.25h0"
+            fill="currentColor"
+            stroke-linecap="round"
+          />
+          <circle
+            cx="12"
+            cy="12"
+            fill="none"
+            r="11.25"
+            stroke-miterlimit="10"
+          />
+        </g>
+      </svg>
       <div
-        class="css-h94677"
+        class="css-1t4in65"
       >
-        <footer
-          class="css-1ry2npb"
-        >
-          <button
-            aria-label="prev-button"
-            class="chakra-button css-1t0rcyz"
-            disabled=""
-            type="button"
-          >
-            Cancel
-          </button>
-          <button
-            aria-label="next-button"
-            class="chakra-button css-1on1g6e"
-            type="button"
-          >
-            Next
-          </button>
-        </footer>
+        <h4
+          class="chakra-heading css-7n4zlk"
+        />
+        <p
+          class="chakra-text css-13wg21h"
+        />
       </div>
     </div>
   </div>,

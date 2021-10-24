@@ -36,7 +36,10 @@ function ResponseStatus({status}){
           <StatusCard variant={status} title={title} body={body}/>
         </Box>
       </Flex>
-      <WizardFooter shouldHideBackButton={true} nextButtonTextId={nextButtonTextId} onClickNext={handleClickNext}/>
+      <WizardFooter
+        shouldHideBackButton={true} n
+        nextButtonTextId={nextButtonTextId}
+        onClickNext={handleClickNext}/>
     </>
   )
 }

@@ -27,7 +27,6 @@ function PasswordInput(props){
   const [errors, setErrors] = React.useState(null)
   const [isValid, setIsValid] = React.useState(true)
   const [validTypes, setValidTypes] = React.useState(null)
-  const intl = useIntl()
 
   const handleInputOnChange = (e) => {
     const { value } = e.target;

@@ -5,9 +5,8 @@ import { Box, Heading, Flex, Text, Checkbox } from '@chakra-ui/react'
 
 import { useStepsWizard } from '../contexts/stepWizardContext'
 import WizardFooter from './Wizard/WizardFooter'
-import headImage from '../public/images/head.png'
-import boxImage from '../public/images/box.png'
-import logo from '../public/images/key_openbank.png'
+import headImage from '../public/head.png'
+import boxImage from '../public/box.png'
 
 function InformationIntro(){
   const [checkedAge, setCheckedAge] = React.useState(false)
@@ -17,18 +16,11 @@ function InformationIntro(){
     setIsStepDisabled(!checkedAge)
   }, [checkedAge])
 
-
-  const onClickNext = async () => {
-  }
-
   return (
     <Box as='section'>
         <Heading textAlign='center' as='h1' fontSize='3xl' color='brand.primary' mb={4}>
           <FormattedMessage id='welcomeTitle' defaultMessage='Welcome to your OpenClose Account'/>
         </Heading>
-        <Box textAlign='center'>
-          <Image width='70px' height='50px' src={logo} alt='openbank logo'/>
-        </Box>
       <Box as='article' py={8} px={[4, 20]}>
         <Heading as='h2' fontSize='3xl'>
           <FormattedMessage id='step1Title' defaultMessage='Create your Password Manager'/>
@@ -71,11 +63,11 @@ function InformationIntro(){
             id='howToContinueDesc'
             defaultMessage='In order to continue you must be over 18 years old, so you will have to confirm it with the check below. Then you must choose your master password that meets the minimum security requirements, confirm it and, if you wish, indicate a recovery track.'/>
         </Text>
-        <Checkbox mt={12} onChange={(e) => setCheckedAge(e.target.checked)}>
+        <Checkbox aria-label='age' mt={12} onChange={(e) => setCheckedAge(e.target.checked)}>
           <FormattedMessage id='ageConfirmation' defaultMessage='I confirm that I am at least 18 years old'/>
         </Checkbox>
       </Box>
-      <WizardFooter onClickNext={onClickNext}/>
+      <WizardFooter/>
     </Box>
   )
 }
