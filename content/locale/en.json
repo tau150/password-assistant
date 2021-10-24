@@ -28,6 +28,6 @@
   "passwordCreated": "Your Password was created",
   "passwordError": "There was an error",
   "passwordCreatedDesc": "You can enjoy your Password Manager",
-  "passwordErrorDesc": "We could not modified your Master Password, try again later"
-
+  "passwordErrorDesc": "We could not modified your Master Password, try again later",
+  "rememberAria": "Remember Password"
 }
