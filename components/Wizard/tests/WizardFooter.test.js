@@ -1,9 +1,9 @@
-import { render } from '../../test-helpers/index'
+import { render } from '../../../test-helpers'
 import { screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import { StepWizardContext } from '../../contexts/stepWizardContext';
-import WizardFooter from './WizardFooter'
+import { StepWizardContext } from '../../../contexts/stepWizardContext';
+import WizardFooter from '../WizardFooter'
 
 const mockHandleNextStep = jest.fn()
 const mockHandlePrevStep = jest.fn()

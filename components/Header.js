@@ -15,7 +15,7 @@ function Header(){
 
   return (
     <Flex as='header' bgColor='blue.100' justifyContent='space-between' alignItems='center' py={4} px={8}>
-      <Box width='10%' h='40px' position='relative' zIndex='2'>
+      <Box width={['50%', '10%' ]}h='40px' position='relative' zIndex='2'>
         <Image layout="fill" objectFit="contain" src="https://www.openbank.es/assets/logo_topbar/Logo_Cancer_Mama_Web_3.svg" alt='openbank logo'/>
       </Box>
       <FormControl m={0} id="lang" d='flex' alignItems='center' w={['40%', '15%']}>

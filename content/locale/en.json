@@ -1,7 +1,7 @@
 {
   "step1Title": "Create your Password Manager",
   "descSave": "Save here all your passwords, data, or any information, forget paper notes and unprotected applications",
-  "descCreate": "reate your master password: only you can access your secrets with it",
+  "descCreate": "Create your master password: only you can access your secrets with it",
   "howWorksTitle": "How it works",
   "howWorksDesc" : "First, you must create a different password for your electronic belongings. You will not be able to recover your password, so remember it well.",
   "dataToSaveTitle": "What data can you save",
@@ -20,7 +20,7 @@
   "helpPasswordInfo": "This will help you to remember your password",
   "minValidation": "Must contain at least {number} characters",
   "maxValidation": "Must contain maximum {number} characters",
-  "leastUpper": "Must at least one upper characters",
+  "leastUpper": "Must contain at least one upper characters",
   "leastSymbol": "Must contain at least one symbol",
   "equalValidation": "The field does not match",
   "backToManager": "Back to Password Manager",

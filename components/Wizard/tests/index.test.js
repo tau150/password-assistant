@@ -1,12 +1,11 @@
-import { render } from '../../test-helpers/index'
+import { render } from '../../../test-helpers'
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import WizardFooter from './WizardFooter';
-import { useStepsWizard } from '../../contexts/stepWizardContext';
+import WizardFooter from '../WizardFooter';
+import { useStepsWizard } from '../../../contexts/stepWizardContext';
 
-import Wizard from './index'
-
+import Wizard from '../index'
 
 function StepOne(){
   return (

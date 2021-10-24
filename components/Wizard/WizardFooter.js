@@ -1,7 +1,7 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
-import { Flex, Spinner } from '@chakra-ui/react'
+import { Flex } from '@chakra-ui/react'
 
 import { useStepsWizard } from '../../contexts/stepWizardContext'
 import Button from '../ui/Button'
@@ -51,20 +51,12 @@ function WizardFooter({onClickNext, onClickBack, nextButtonTextId, shouldHideBac
   return (
     <Flex as='footer' borderTop='1px' borderColor='gray.200' py={[2, 12]} px={[2, 36]} alignItems={'center'} justifyContent={shouldHideBackButton ? 'flex-end' : 'space-between'}>
       {!shouldHideBackButton && (
-      <Button aria-label='prev-button' variant="secondary" disabled={isPrevDisabled} onClick={handleClickBack}>
+      <Button aria-label='prev-button' variant="secondary" disabled={isPrevDisabled || isLoading} onClick={handleClickBack}>
         <FormattedMessage  id='cancel' defaultMessage='Cancel'/>
       </Button>
       )}
       <Button aria-label='next-button' variant="primary" disabled={isStepDisabled || isLoading} onClick={handleClickNext}>
-       {isLoading ? (<Spinner
-          data-testid='loading-spinner'
-          thickness="4px"
-          speed="0.65s"
-          emptyColor="gray.200"
-          color="gray.500"
-          size="md"
-        />) :
-        <FormattedMessage id={nextButtonTextId} defaultMessage='Next'/>}
+        <FormattedMessage id={nextButtonTextId} defaultMessage='Next'/>
       </Button>
     </Flex>
   )

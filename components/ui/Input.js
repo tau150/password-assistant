@@ -7,17 +7,16 @@ import { FormControl, FormLabel, FormHelperText, InputGroup, Input as CHInput, T
 
 import { validateInput, extractI18nConfig } from '../../utils/formValidation'
 
-function getLabelColor(errors, validTypes, type) {
+function getLabelInfo(errors, validTypes, type) {
   if(!errors && !validTypes){
-    return 'gray.500'
+    return {color: 'gray.500', aria: 'regular'}
   }
   if(errors?.includes(type)){
-    return 'red.300'
+    return {color: 'red.300', aria: 'error'}
   }
   if(validTypes.includes(type)){
-    return 'green.300'
+    return {color: 'green.300', aria: 'success'}
   }
-
 }
 function Input(props){
   const { name, id, label, handleOnChange, placeholder, validations, type,
@@ -61,12 +60,14 @@ function Input(props){
         {tooltipText && (<Tooltip
           hasArrow placement='top'
           label={tooltipText}
-          aria-label={ariaTooltip}>
-            <Icon ml={2} color='blue.500' as={Info} />
+         >
+            <Icon ml={2} color='blue.500' role='tooltip' aria-label={ariaTooltip} as={Info} />
           </Tooltip>)}
         </FormLabel>
         <InputGroup size="md" position='relative'>
         <CHInput
+          role='input'
+          aria-label={id}
           id={id}
           name={name}
           value={inputValue}
@@ -79,15 +80,15 @@ function Input(props){
         />
         <InputRightElement width="4.5rem">
           {shouldToggleShow && (
-            show ? <Icon as={EyeOff} onClick={handleClick}/> : <Icon as={Eye} onClick={handleClick}/>
+            show ? <Icon as={EyeOff} onClick={handleClick} data-testid='eye-off'/> : <Icon as={Eye} onClick={handleClick} data-testid='eye-on'/>
           )}
         </InputRightElement>
-        {showValidTick && <Icon right='-40px' position='absolute' m={4} as={Check} color='green.400' />}
+        {showValidTick && <Icon right='-40px' position='absolute' m={4} as={Check} color='green.400' data-testid='positive-tick'/>}
       </InputGroup>
       {shouldCountChars && <FormHelperText textAlign='right'>{`${inputValue.length}/${inputLimit}`}</FormHelperText>}
       {showErrorMessages && (
-        <Box mt={2} px={2} py={1} bgColor='gray.100' position='absolute'>
-          {validationReferences?.map(validation => <Text mt={1} color={getLabelColor(errors, validTypes, validation.type)} key={validation.type}>
+        <Box mt={2} px={2} py={1} bgColor='gray.100' position='absolute' data-testid='validations-container'>
+          {validationReferences?.map(validation => <Text mt={1} role="status" aria-label={getLabelInfo(errors, validTypes, validation.type).aria}  color={getLabelInfo(errors, validTypes, validation.type).color} key={validation.type}>
            <FormattedMessage id={validation.i18nId} defaultMessage={validation.defaultMessage} values={{ [validation.i18nVariable]: validation.i18nValue }}/>
           </Text>)}
       </Box>

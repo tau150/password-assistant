@@ -1,7 +1,7 @@
-import { render } from '../../test-helpers/index'
+import { render } from '../../../test-helpers'
 import { screen } from '@testing-library/react';
 
-import StepsIndicator from './StepsIndicator'
+import StepsIndicator from '../StepsIndicator'
 
 let props;
 

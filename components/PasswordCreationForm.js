@@ -1,6 +1,6 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
-import { Box, Heading, Text, Stack} from '@chakra-ui/react'
+import { Box, Heading, Text, Stack, Spinner, Flex} from '@chakra-ui/react'
 import { FormattedMessage, useIntl } from 'react-intl'
 
 import { submitForm } from '../pages/api/open'
@@ -28,6 +28,7 @@ function PasswordCreationForm({setPasswordResponse}){
   const [,setPasswordConfInputValue] = React.useState('')
   const [isPasswordValid, setIsPasswordValid] = React.useState(false)
   const [isPasswordConfValid, setIsPasswordConfValid] = React.useState(false)
+  const [isLoading, setIsLoading] = React.useState(false)
 
 
   React.useEffect( () => {
@@ -55,6 +56,7 @@ function PasswordCreationForm({setPasswordResponse}){
   }
 
   const onClickNext = async () => {
+    setIsLoading(true)
     try {
      const res = await submitForm(passWordInputValue)
      const { status } = res
@@ -65,56 +67,71 @@ function PasswordCreationForm({setPasswordResponse}){
       setPasswordResponse(statusConst.ERROR)
     }
   }
+
   return (
     <Box as='section' p={18} mt={12}>
-      <Heading as='h2' fontSize='3xl'>
-        <FormattedMessage id='step1Title' defaultMessage='Create your Password Manager'/>
-      </Heading>
-      <Text maxW={{xs: '100%', md: '50%'}} mt={8}>
-        <FormattedMessage
-          id='howWorksDesc'
-          defaultMessage='First, you must create a different password for your electronic belongings. You will not be able to recover your password, so remember it well.'
+      {isLoading ? (
+        <Flex h='400px' alignItems='center' justifyContent='center'>
+        <Spinner
+          thickness="4px"
+          speed="0.65s"
+          emptyColor="gray.200"
+          color="blue.500"
+          size="xl"
         />
-      </Text>
-      <form>
-        <Stack mt={12} direction={["column", "row"]} spacing={['220px', 20]}>
-          <Box w={['100%', '30%']}>
-            <Input
-              shouldToggleShow={true}
-              placeholder={intl.formatMessage({ id: 'createPasswordLabel', defaultMessage: 'Create your Master Password' })}
-              name='password'
-              id='password'
-              label={intl.formatMessage({ id: 'createPasswordLabel', defaultMessage: 'Create your Master Password' })}
-              handleOnChange={handleChangePasswordInput}
-              validations={passwordValidations}
-            />
+      </Flex>
+      ) : (
+      <>
+        <Heading as='h2' fontSize='3xl'>
+          <FormattedMessage id='step1Title' defaultMessage='Create your Password Manager'/>
+        </Heading>
+        <Text maxW={{xs: '100%', md: '50%'}} mt={8}>
+          <FormattedMessage
+            id='howWorksDesc'
+            defaultMessage='First, you must create a different password for your electronic belongings. You will not be able to recover your password, so remember it well.'
+          />
+        </Text>
+        <form>
+          <Stack mt={12} direction={["column", "row"]} spacing={['220px', 20]}>
+            <Box w={['100%', '30%']}>
+              <Input
+                shouldToggleShow={true}
+                placeholder={intl.formatMessage({ id: 'createPasswordLabel', defaultMessage: 'Create your Master Password' })}
+                name='password'
+                id='password'
+                label={intl.formatMessage({ id: 'createPasswordLabel', defaultMessage: 'Create your Master Password' })}
+                handleOnChange={handleChangePasswordInput}
+                validations={passwordValidations}
+              />
+            </Box>
+            <Box w={['100%', '30%']}>
+              <Input
+                shouldToggleShow={true}
+                placeholder={intl.formatMessage({ id: 'confirmPasswordLabel', defaultMessage: 'Repeat your Master Password' })}
+                name='passwordConfirmation'
+                id='passwordConfirmation'
+                label={intl.formatMessage({ id: 'confirmPasswordLabel', defaultMessage: 'Repeat your Master Password' })}
+                handleOnChange={handleChangePasswordConfInput}
+                validations={[{type: validationKeys.EQUAL, reference: passWordInputValue}]}
+              />
+            </Box>
+          </Stack>
+          <Box mt={12}  w={['100%', '65%']} mt={[16, 36]}>
+          <Input
+            placeholder={intl.formatMessage({ id: 'confirmPasswordLabel', defaultMessage: 'Repeat your Master Password' })}
+            name='clue'
+            id='clue'
+            shouldCountChars={true}
+            label={intl.formatMessage({ id: 'helpPasswordLabel', defaultMessage: 'Create your clue to remember your password (optional)' })}
+            tooltipText={intl.formatMessage({ id: 'helpPasswordInfo', defaultMessage: 'This will help you to remember your password' })}
+            ariaTooltip={intl.formatMessage({ id: 'rememberAria', defaultMessage: 'Remember Password' })}
+            placeholder={intl.formatMessage({ id: 'helpPasswordPh', defaultMessage: 'Enter a clue' })}
+            handleOnChange={handleChangeClueInput}
+          />
           </Box>
-          <Box w={['100%', '30%']}>
-            <Input
-              shouldToggleShow={true}
-              placeholder={intl.formatMessage({ id: 'confirmPasswordLabel', defaultMessage: 'Repeat your Master Password' })}
-              name='passwordConfirmation'
-              id='passwordConfirmation'
-              label={intl.formatMessage({ id: 'confirmPasswordLabel', defaultMessage: 'Repeat your Master Password' })}
-              handleOnChange={handleChangePasswordConfInput}
-              validations={[{type: validationKeys.EQUAL, reference: passWordInputValue}]}
-            />
-          </Box>
-        </Stack>
-        <Box mt={12}  w={['100%', '65%']} mt={[16, 36]}>
-        <Input
-          placeholder={intl.formatMessage({ id: 'confirmPasswordLabel', defaultMessage: 'Repeat your Master Password' })}
-          name='clue'
-          id='clue'
-          shouldCountChars={true}
-          label={intl.formatMessage({ id: 'helpPasswordLabel', defaultMessage: 'Create your clue to remember your password (optional)' })}
-          tooltipText={intl.formatMessage({ id: 'helpPasswordInfo', defaultMessage: 'This will help you to remember your password' })}
-          ariaTooltip={intl.formatMessage({ id: 'rememberAria', defaultMessage: 'Remember Password' })}
-          placeholder={intl.formatMessage({ id: 'helpPasswordPh', defaultMessage: 'Enter a clue' })}
-          handleOnChange={handleChangeClueInput}
-        />
-        </Box>
-      </form>
+        </form>
+      </>
+      )}
       <Box mt={8}>
         <WizardFooter onClickNext={onClickNext}/>
       </Box>
