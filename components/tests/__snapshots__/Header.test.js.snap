@@ -39,18 +39,18 @@ Object {
         class="css-1mkudia"
       >
         <div
-          class="css-11n3wsa"
+          class="css-195ke11"
         >
           <img
             alt="test"
           />
         </div>
         <div
-          class="chakra-form-control css-mq3jol"
+          class="chakra-form-control css-fweyon"
           role="group"
         >
           <label
-            class="chakra-form__label css-1m92gfn"
+            class="chakra-form__label css-15p4kd2"
             for="lang"
             id="lang-label"
           >
@@ -102,18 +102,18 @@ Object {
       class="css-1mkudia"
     >
       <div
-        class="css-11n3wsa"
+        class="css-195ke11"
       >
         <img
           alt="test"
         />
       </div>
       <div
-        class="chakra-form-control css-mq3jol"
+        class="chakra-form-control css-fweyon"
         role="group"
       >
         <label
-          class="chakra-form__label css-1m92gfn"
+          class="chakra-form__label css-15p4kd2"
           for="lang"
           id="lang-label"
         >

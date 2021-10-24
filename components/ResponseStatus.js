@@ -13,7 +13,9 @@ function ResponseStatus({status}){
   const { handlePrevStep, setCurrentStep, setIsFinished } = useStepsWizard()
 
   React.useEffect(() => {
-    setIsFinished(true)
+    if(status === statusConst.SUCCESS){
+      setIsFinished(true)
+    }
   }, [])
 
   const title = status === statusConst.SUCCESS  ?

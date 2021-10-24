@@ -5,7 +5,7 @@ import { Check } from 'react-feather'
 
 function getBgColor(activeStep, number, isFinished){
   if((activeStep > number || isFinished)){
-    return "red.500"
+    return "green.400"
   }
   if(activeStep === number){
     return "brand.secondary"
@@ -28,7 +28,7 @@ function StepsIndicator({stepsNumber, activeStep, isFinished}){
               as='span'
               w='100px'
               h='5px'
-              bgColor={((number !== stepsNumber && activeStep > number)) ? 'red.500' : 'brand.accent'}
+              bgColor={((number !== stepsNumber && activeStep > number)) ? 'green.400' : 'brand.accent'}
             />)}
           <Badge
             fontSize='18px'

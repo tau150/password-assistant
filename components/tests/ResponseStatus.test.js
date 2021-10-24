@@ -8,16 +8,17 @@ import { StepWizardContext } from '../../contexts/stepWizardContext';
 
 import ResponseStatus from '../ResponseStatus'
 
-
 const mockHandleNextStep = jest.fn()
 const mockHandlePrevStep = jest.fn()
 const mockSetCurrentStep = jest.fn()
+const mockSetIsFinished = jest.fn()
 
 const defaultContextProps = {
   currentStep: 0,
   setCurrentStep: mockSetCurrentStep,
   handleNextStep: mockHandleNextStep,
   handlePrevStep: mockHandlePrevStep,
+  setIsFinished: mockSetIsFinished,
   isStepDisabled: false
 }
 
@@ -45,6 +46,7 @@ describe('Response Status test', () => {
 
     await waitFor(() => {
       expect(mockSetCurrentStep).toHaveBeenCalledWith(0)
+      expect(mockSetIsFinished).toHaveBeenCalledWith(false)
     })
   })
 
@@ -58,6 +60,7 @@ describe('Response Status test', () => {
 
     await waitFor(() => {
       expect(mockHandlePrevStep).toHaveBeenCalled()
+      expect(mockSetIsFinished).toHaveBeenCalledWith(false)
     })
   })
 
