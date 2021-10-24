@@ -1,12 +1,13 @@
 import '@testing-library/jest-dom/extend-expect'
 
+// next/image brings some issues with testing, this workaround solve them.
 jest.mock('next/image', () => ({
   __esModule: true,
-  default: (props) => {
+  default: () => {
     // eslint-disable-next-line @next/next/no-img-element
     // eslint-disable-next-line jsx-a11y/alt-text
     // eslint-disable-next-line @next/next/no-img-element
-    return <img {...props} alt='test' />
+    return <img alt='test' />
   },
 }))
 
@@ -19,4 +20,4 @@ process.env = {
       path: '/_next/image',
       loader: 'default',
   },
-};
+}

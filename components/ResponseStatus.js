@@ -19,7 +19,7 @@ function ResponseStatus({status}){
    intl.formatMessage({ id: 'passwordCreatedDesc', defaultMessage: 'You can enjoy your Password Manager' }) :
    intl.formatMessage({ id: 'passwordErrorDesc', defaultMessage: 'We could not modified your Master Password, try again later' })
 
-  const nextButtonTextId = status === statusConst.SUCCESS ?  'access' : 'backToManager';
+  const nextButtonTextId = status === statusConst.SUCCESS ?  'access' : 'backToManager'
 
   const handleClickNext = () => {
     if(status === statusConst.SUCCESS){
@@ -49,4 +49,4 @@ ResponseStatus.propTypes = {
 }
 
 
-export default ResponseStatus;
+export default ResponseStatus

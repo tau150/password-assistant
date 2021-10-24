@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { screen } from '@testing-library/dom'
 import { render } from '../../test-helpers'
-import userEvent from '@testing-library/user-event';
+import userEvent from '@testing-library/user-event'
 
 import InformationIntro from '../InformationIntro'
 import Wizard from '../Wizard'

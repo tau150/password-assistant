@@ -1,10 +1,10 @@
 
 import * as React from 'react'
 import {   render as rtlRender } from '@testing-library/react'
-import { IntlProvider } from 'react-intl';
+import { IntlProvider } from 'react-intl'
 import { ChakraProvider } from "@chakra-ui/react"
 
-import theme from '../styles/theme';
+import theme from '../styles/theme'
 import intlENmessages from '../content/locale/en.json'
 
 function AppProviders({children}){

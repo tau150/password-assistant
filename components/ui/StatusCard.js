@@ -27,4 +27,4 @@ StatusCard.propTypes = {
   body: PropTypes.string
 }
 
-export default StatusCard;
+export default StatusCard

@@ -1,7 +1,7 @@
-import { validationKeys, validationsI18nReferences } from "../constants/validations";
+import { validationKeys, validationsI18nReferences } from "../constants/validations"
 
-const regexpAtLeastOneUpperLetter = /^(?=.*[A-Z])/;
-const regexAtLeastOneSymbol = /(?=.*\W)/;
+const regexpAtLeastOneUpperLetter = /^(?=.*[A-Z])/
+const regexAtLeastOneSymbol = /(?=.*\W)/
 
 const validationsMap = {
   [validationKeys.MIN] : (value, reference) => value.length > reference,
@@ -23,9 +23,9 @@ export function validateInput(value, validations){
     }
   })
 
-  const isValid = errors.length === 0;
+  const isValid = errors.length === 0
 
-  return {isValid, errors: isValid ? null : errors, validTypes};
+  return {isValid, errors: isValid ? null : errors, validTypes}
 }
 
 export function extractI18nConfig(validations){

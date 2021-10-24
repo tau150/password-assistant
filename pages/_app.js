@@ -10,8 +10,8 @@ import theme from '../styles/theme'
 
 function MyApp({ Component, pageProps }) {
 
-  const { locale } = useRouter();
-  const [shortLocale] = locale ? locale.split("-") : ["en"];
+  const { locale } = useRouter()
+  const [shortLocale] = locale ? locale.split("-") : ["en"]
 
   const langs = {
     es: intlESmessages,

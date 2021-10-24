@@ -1,8 +1,8 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
-import { Eye, EyeOff, Check } from "react-feather";
-import { FormattedMessage, useIntl } from 'react-intl';
-import { Info } from "react-feather";
+import { Eye, EyeOff, Check } from "react-feather"
+import { FormattedMessage } from 'react-intl'
+import { Info } from "react-feather"
 import { FormControl, FormLabel, FormHelperText, InputGroup, Input as CHInput, Tooltip, InputRightElement, Icon, Box, Text } from '@chakra-ui/react'
 
 import { validateInput, extractI18nConfig } from '../../utils/formValidation'
@@ -21,7 +21,7 @@ function getLabelColor(errors, validTypes, type) {
 }
 function Input(props){
   const { name, id, label, handleOnChange, placeholder, validations, type,
-    tooltipText, ariaTooltip, shouldCountChars, shouldToggleShow, inputLimit } = props;
+    tooltipText, ariaTooltip, shouldCountChars, shouldToggleShow, inputLimit } = props
 
   const [show, setShow] = React.useState(false)
   const [inputValue, setInputValue] = React.useState('')
@@ -31,8 +31,8 @@ function Input(props){
   const [validTypes, setValidTypes] = React.useState(null)
 
   const handleInputOnChange = (e) => {
-    const { value } = e.target;
-    let isValidInput = true;
+    const { value } = e.target
+    let isValidInput = true
 
     if(validations){
       const { isValid: successValidation, errors, validTypes} = validateInput(value, validations)
@@ -42,7 +42,7 @@ function Input(props){
       setValidTypes(validTypes)
     }
     if(shouldCountChars && (inputLimit < value.length)){
-      return;
+      return
     }
     setInputValue(value)
     handleOnChange?.(e, isValidInput)

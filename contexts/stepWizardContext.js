@@ -1,6 +1,6 @@
-import * as React from 'react';
+import * as React from 'react'
 
-export const StepWizardContext = React.createContext();
+export const StepWizardContext = React.createContext()
 
 export function useStepsWizard(){
   const context = React.useContext(StepWizardContext)
@@ -8,4 +8,4 @@ export function useStepsWizard(){
     throw new Error('useStepsWizard must be used within a Wizard')
   }
   return React.useContext(StepWizardContext)
-};
+}

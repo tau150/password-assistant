@@ -9,23 +9,23 @@ import Button from '../ui/Button'
 function WizardFooter({onClickNext, onClickBack, nextButtonTextId, shouldHideBackButton}){
   const { handlePrevStep, handleNextStep, isStepDisabled, currentStep, isLastStep, numberOfSteps } = useStepsWizard()
   const [isLoading, setIsLoading] = React.useState(false)
-  const isPrevDisabled = currentStep === 0;
+  const isPrevDisabled = currentStep === 0
 
 
   React.useEffect(() => {
     const listener = event => {
       if (event.code === "Enter" || event.code === "NumpadEnter") {
-        event.preventDefault();
+        event.preventDefault()
         if(!isStepDisabled && numberOfSteps > (currentStep + 1) ){
           handleClickNext()
         }
       }
-    };
-    document.addEventListener("keydown", listener);
+    }
+    document.addEventListener("keydown", listener)
     return () => {
-      document.removeEventListener("keydown", listener);
-    };
-  }, [isStepDisabled, currentStep]);
+      document.removeEventListener("keydown", listener)
+    }
+  }, [isStepDisabled, currentStep])
 
 
   const handleClickNext = async () => {

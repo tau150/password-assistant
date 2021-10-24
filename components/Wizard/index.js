@@ -8,7 +8,7 @@ function Wizard({children}){
   const [currentStep, setCurrentStep] = React.useState(0)
   const [isStepDisabled, setIsStepDisabled] = React.useState(false)
 
-  const stepsNumberBasedOnChildren = React.Children.count(children);
+  const stepsNumberBasedOnChildren = React.Children.count(children)
 
   const handleNextStep = async () => {
     setCurrentStep( prev => prev += 1)
@@ -18,8 +18,8 @@ function Wizard({children}){
     setCurrentStep( prev => prev -= 1)
   }
 
-  const arrayOfChildren = React.Children.toArray(children);
-  const currentContent = arrayOfChildren[currentStep];
+  const arrayOfChildren = React.Children.toArray(children)
+  const currentContent = arrayOfChildren[currentStep]
   const isLastStep = currentStep + 1 === stepsNumberBasedOnChildren
 
   const value = {

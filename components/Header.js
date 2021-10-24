@@ -2,7 +2,7 @@ import * as React from 'react'
 import Image from "next/image"
 import { useRouter } from 'next/dist/client/router'
 import { FormattedMessage } from 'react-intl'
-import { Flex, FormControl, FormLabel, Select, Box, HStack } from '@chakra-ui/react'
+import { Flex, FormControl, FormLabel, Select, Box } from '@chakra-ui/react'
 
 function Header(){
   const router = useRouter()
@@ -22,7 +22,7 @@ function Header(){
         <FormLabel my={0} color='brand.secondary' minW='90px'>
           <FormattedMessage id='language' defaultMessage='Language' />
         </FormLabel>
-        <Select borderColor='brand.secondary' value={locale} onChange={handleLangChange}>
+        <Select borderColor='brand.secondary' value={locale} onChange={handleLangChange} aria-label='language-selector'>
           <option value="es">ES</option>
           <option value="en">EN</option>
         </Select>
@@ -30,4 +30,4 @@ function Header(){
     </Flex>
   )
 }
-export default Header;
+export default Header

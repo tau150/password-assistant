@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { Box, Heading, Text, Stack} from '@chakra-ui/react'
 import { FormattedMessage, useIntl } from 'react-intl'
 
-import { submitForm } from '../pages/api/open';
-import { status as statusConst } from '../constants/ui';
+import { submitForm } from '../pages/api/open'
+import { status as statusConst } from '../constants/ui'
 import { useStepsWizard } from '../contexts/stepWizardContext'
 import { validationKeys } from '../constants/validations'
 import WizardFooter from './Wizard/WizardFooter'
@@ -16,7 +16,7 @@ const passwordValidations = [
   {type: validationKeys.MAX, reference: 24},
   {type: validationKeys.ONE_UPPER },
   {type: validationKeys.ONE_SYMBOL }
-];
+]
 
 function PasswordCreationForm({setPasswordResponse}){
   const intl = useIntl()
@@ -36,20 +36,20 @@ function PasswordCreationForm({setPasswordResponse}){
 
 
   const handleChangeClueInput = (e) => {
-    const { value } = e.target;
+    const { value } = e.target
     if(value.length < 61){
       setClueInputValue(value)
     }
   }
 
   const handleChangePasswordInput = (e, isValid) => {
-    const { value } = e.target;
-    setPasswordInputValue(value);
+    const { value } = e.target
+    setPasswordInputValue(value)
     setIsPasswordValid(isValid)
   }
 
   const handleChangePasswordConfInput = (e, isValid) => {
-    const { value } = e.target;
+    const { value } = e.target
     setPasswordConfInputValue(value)
     setIsPasswordConfValid(isValid)
   }
