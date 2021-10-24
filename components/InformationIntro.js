@@ -64,7 +64,9 @@ function InformationIntro(){
             defaultMessage='In order to continue you must be over 18 years old, so you will have to confirm it with the check below. Then you must choose your master password that meets the minimum security requirements, confirm it and, if you wish, indicate a recovery track.'/>
         </Text>
         <Checkbox aria-label='age' mt={12} onChange={(e) => setCheckedAge(e.target.checked)}>
-          <FormattedMessage id='ageConfirmation' defaultMessage='I confirm that I am at least 18 years old'/>
+          <Text fontSize={[14, 16]}>
+            <FormattedMessage id='ageConfirmation' defaultMessage='I confirm that I am at least 18 years old'/>
+          </Text>
         </Checkbox>
       </Box>
       <WizardFooter/>

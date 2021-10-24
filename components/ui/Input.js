@@ -66,6 +66,7 @@ function Input(props){
         </FormLabel>
         <InputGroup size="md" position='relative'>
         <CHInput
+          _placeholder={{fontSize: ['12', '16']}}
           role='input'
           aria-label={id}
           id={id}
@@ -88,9 +89,11 @@ function Input(props){
       {shouldCountChars && <FormHelperText textAlign='right'>{`${inputValue.length}/${inputLimit}`}</FormHelperText>}
       {showErrorMessages && (
         <Box mt={2} px={2} py={1} bgColor='gray.100' position='absolute' data-testid='validations-container'>
-          {validationReferences?.map(validation => <Text mt={1} role="status" aria-label={getLabelInfo(errors, validTypes, validation.type).aria}  color={getLabelInfo(errors, validTypes, validation.type).color} key={validation.type}>
-           <FormattedMessage id={validation.i18nId} defaultMessage={validation.defaultMessage} values={{ [validation.i18nVariable]: validation.i18nValue }}/>
-          </Text>)}
+          {validationReferences?.map(validation => (
+            <Text mt={1} fontSize={[12, 16]} role="status" aria-label={getLabelInfo(errors, validTypes, validation.type).aria}  color={getLabelInfo(errors, validTypes, validation.type).color} key={validation.type}>
+              <FormattedMessage id={validation.i18nId} defaultMessage={validation.defaultMessage} values={{ [validation.i18nVariable]: validation.i18nValue }}/>
+            </Text>
+            ))}
       </Box>
       )}
     </FormControl>

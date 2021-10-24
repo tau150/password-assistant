@@ -151,7 +151,11 @@ Object {
                 <span
                   class="chakra-checkbox__label css-1sgc0qu"
                 >
-                  I confirm that I am at least 18 years old
+                  <p
+                    class="chakra-text css-vmgq0k"
+                  >
+                    I confirm that I am at least 18 years old
+                  </p>
                 </span>
               </label>
             </article>
@@ -297,7 +301,11 @@ Object {
               <span
                 class="chakra-checkbox__label css-1sgc0qu"
               >
-                I confirm that I am at least 18 years old
+                <p
+                  class="chakra-text css-vmgq0k"
+                >
+                  I confirm that I am at least 18 years old
+                </p>
               </span>
             </label>
           </article>

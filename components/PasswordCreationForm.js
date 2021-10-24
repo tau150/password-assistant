@@ -92,7 +92,7 @@ function PasswordCreationForm({setPasswordResponse}){
           />
         </Text>
         <form>
-          <Stack mt={12} direction={["column", "row"]} spacing={['220px', 20]}>
+          <Stack mt={12} direction={["column", "row"]} spacing={['130px', 20]}>
             <Box w={['100%', '30%']}>
               <Input
                 shouldToggleShow={true}
@@ -116,18 +116,18 @@ function PasswordCreationForm({setPasswordResponse}){
               />
             </Box>
           </Stack>
-          <Box mt={12}  w={['100%', '65%']} mt={[16, 36]}>
-          <Input
-            placeholder={intl.formatMessage({ id: 'confirmPasswordLabel', defaultMessage: 'Repeat your Master Password' })}
-            name='clue'
-            id='clue'
-            shouldCountChars={true}
-            label={intl.formatMessage({ id: 'helpPasswordLabel', defaultMessage: 'Create your clue to remember your password (optional)' })}
-            tooltipText={intl.formatMessage({ id: 'helpPasswordInfo', defaultMessage: 'This will help you to remember your password' })}
-            ariaTooltip={intl.formatMessage({ id: 'rememberAria', defaultMessage: 'Remember Password' })}
-            placeholder={intl.formatMessage({ id: 'helpPasswordPh', defaultMessage: 'Enter a clue' })}
-            handleOnChange={handleChangeClueInput}
-          />
+          <Box w={['100%', '65%']} mt={36}>
+            <Input
+              placeholder={intl.formatMessage({ id: 'confirmPasswordLabel', defaultMessage: 'Repeat your Master Password' })}
+              name='clue'
+              id='clue'
+              shouldCountChars={true}
+              label={intl.formatMessage({ id: 'helpPasswordLabel', defaultMessage: 'Create your clue to remember your password (optional)' })}
+              tooltipText={intl.formatMessage({ id: 'helpPasswordInfo', defaultMessage: 'This will help you to remember your password' })}
+              ariaTooltip={intl.formatMessage({ id: 'rememberAria', defaultMessage: 'Remember Password' })}
+              placeholder={intl.formatMessage({ id: 'helpPasswordPh', defaultMessage: 'Enter a clue' })}
+              handleOnChange={handleChangeClueInput}
+            />
           </Box>
         </form>
       </>

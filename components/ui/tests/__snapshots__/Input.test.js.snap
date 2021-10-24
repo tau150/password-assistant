@@ -84,7 +84,7 @@ Object {
         >
           <input
             aria-label="testInput"
-            class="chakra-input css-w3szeq"
+            class="chakra-input css-155nkyn"
             id="testInput"
             name="testInput"
             placeholder="Some placeholder"
@@ -173,7 +173,7 @@ Object {
       >
         <input
           aria-label="testInput"
-          class="chakra-input css-w3szeq"
+          class="chakra-input css-155nkyn"
           id="testInput"
           name="testInput"
           placeholder="Some placeholder"
