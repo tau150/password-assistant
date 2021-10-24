@@ -13,7 +13,7 @@ function ResponseStatus({status}){
   const { handlePrevStep, setCurrentStep } = useStepsWizard()
 
   const title = status === statusConst.SUCCESS  ?
-    intl.formatMessage({ id: 'passwordCreated', defaultMessage: 'Your Password was created' }) :
+    intl.formatMessage({ id: 'passwordCreated', defaultMessage: 'Your Password was created' }) :a
     intl.formatMessage({ id: 'passwordError', defaultMessage: 'There was an error' })
   const body = status === statusConst.SUCCESS  ?
    intl.formatMessage({ id: 'passwordCreatedDesc', defaultMessage: 'You can enjoy your Password Manager' }) :

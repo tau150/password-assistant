@@ -4,7 +4,6 @@ import userEvent from '@testing-library/user-event';
 
 import { StepWizardContext } from '../../contexts/stepWizardContext';
 import WizardFooter from './WizardFooter'
-import Wizard from './index'
 
 const mockHandleNextStep = jest.fn()
 const mockHandlePrevStep = jest.fn()
@@ -21,14 +20,6 @@ beforeEach( () => {
 })
 
 
-function WizardFooterWrapper(){
-  return (
-    <Wizard>
-      <WizardFooter />
-    </Wizard>
-  )
-}
-
 function WizardContextWrapper(props) {
   return (
     <StepWizardContext.Provider value={{...props}}>
@@ -37,10 +28,9 @@ function WizardContextWrapper(props) {
   )
 }
 
-
 describe('Wizard Footer test', () => {
   test('Should match snapshot', () => {
-    expect(render(<WizardFooterWrapper />)).toMatchSnapshot()
+    expect(render(<WizardContextWrapper />)).toMatchSnapshot()
   })
 
   test('Next button can\'t be actionable if the currentStep is disabled', async () => {

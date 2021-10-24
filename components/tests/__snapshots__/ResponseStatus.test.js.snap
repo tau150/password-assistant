@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Wizard Footer test Should match snapshot 1`] = `
+exports[`Response Status test renders Response Status 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body
@@ -35,43 +35,137 @@ Object {
       />
     </div>
     <div>
-      <footer
-        class="css-1ry2npb"
+      <div
+        class="css-thupkg"
       >
-        <button
-          aria-label="prev-button"
-          class="chakra-button css-1jq921s"
-          type="button"
+        <div
+          class="css-13l47xf"
         >
-          Cancel
-        </button>
+          <div
+            class="css-dq00q9"
+          >
+            <svg
+              class="chakra-icon css-qelcgd"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <g
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path
+                  d="M9,9a3,3,0,1,1,4,2.829,1.5,1.5,0,0,0-1,1.415V14.25"
+                  fill="none"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M12,17.25a.375.375,0,1,0,.375.375A.375.375,0,0,0,12,17.25h0"
+                  fill="currentColor"
+                  stroke-linecap="round"
+                />
+                <circle
+                  cx="12"
+                  cy="12"
+                  fill="none"
+                  r="11.25"
+                  stroke-miterlimit="10"
+                />
+              </g>
+            </svg>
+            <div
+              class="css-1t4in65"
+            >
+              <h4
+                class="chakra-heading css-7n4zlk"
+              >
+                There was an error
+              </h4>
+              <p
+                class="chakra-text css-13wg21h"
+              >
+                We could not modified your Master Password, try again later
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer
+        class="css-teiq65"
+      >
         <button
           aria-label="next-button"
           class="chakra-button css-1on1g6e"
           type="button"
         >
-          Next
+          Back to Password Manager
         </button>
       </footer>
     </div>
   </body>,
   "container": <div>
-    <footer
-      class="css-1ry2npb"
+    <div
+      class="css-thupkg"
     >
-      <button
-        aria-label="prev-button"
-        class="chakra-button css-1jq921s"
-        type="button"
+      <div
+        class="css-13l47xf"
       >
-        Cancel
-      </button>
+        <div
+          class="css-dq00q9"
+        >
+          <svg
+            class="chakra-icon css-qelcgd"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <g
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <path
+                d="M9,9a3,3,0,1,1,4,2.829,1.5,1.5,0,0,0-1,1.415V14.25"
+                fill="none"
+                stroke-linecap="round"
+              />
+              <path
+                d="M12,17.25a.375.375,0,1,0,.375.375A.375.375,0,0,0,12,17.25h0"
+                fill="currentColor"
+                stroke-linecap="round"
+              />
+              <circle
+                cx="12"
+                cy="12"
+                fill="none"
+                r="11.25"
+                stroke-miterlimit="10"
+              />
+            </g>
+          </svg>
+          <div
+            class="css-1t4in65"
+          >
+            <h4
+              class="chakra-heading css-7n4zlk"
+            >
+              There was an error
+            </h4>
+            <p
+              class="chakra-text css-13wg21h"
+            >
+              We could not modified your Master Password, try again later
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer
+      class="css-teiq65"
+    >
       <button
         aria-label="next-button"
         class="chakra-button css-1on1g6e"
         type="button"
       >
-        Next
+        Back to Password Manager
       </button>
     </footer>
   </div>,
