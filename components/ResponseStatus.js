@@ -10,7 +10,11 @@ import StatusCard from './ui/StatusCard'
 
 function ResponseStatus({status}){
   const intl = useIntl()
-  const { handlePrevStep, setCurrentStep } = useStepsWizard()
+  const { handlePrevStep, setCurrentStep, setIsFinished } = useStepsWizard()
+
+  React.useEffect(() => {
+    setIsFinished(true)
+  }, [])
 
   const title = status === statusConst.SUCCESS  ?
     intl.formatMessage({ id: 'passwordCreated', defaultMessage: 'Your Password was created' }) :
@@ -22,6 +26,7 @@ function ResponseStatus({status}){
   const nextButtonTextId = status === statusConst.SUCCESS ?  'access' : 'backToManager'
 
   const handleClickNext = () => {
+    setIsFinished(false)
     if(status === statusConst.SUCCESS){
       setCurrentStep(0)
     }else{

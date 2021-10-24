@@ -7,6 +7,7 @@ import StepsIndicator from './StepsIndicator'
 function Wizard({children}){
   const [currentStep, setCurrentStep] = React.useState(0)
   const [isStepDisabled, setIsStepDisabled] = React.useState(false)
+  const [isFinished, setIsFinished] = React.useState(false)
 
   const stepsNumberBasedOnChildren = React.Children.count(children)
 
@@ -30,14 +31,16 @@ function Wizard({children}){
     isStepDisabled,
     handleNextStep,
     handlePrevStep,
-    isLastStep
+    isLastStep,
+    setIsFinished,
+
   }
 
   return (
     <StepWizardContext.Provider value={value}>
       <Box border='1px solid brand.accent' boxShadow='lg'>
         <Flex as='header' position='relative' zIndex='2' h='80px' bgColor='gray.200' alignItems='center' justifyContent='center' boxShadow='md'>
-          <StepsIndicator stepsNumber={stepsNumberBasedOnChildren} activeStep={currentStep + 1}/>
+          <StepsIndicator stepsNumber={stepsNumberBasedOnChildren} activeStep={currentStep + 1} isFinished={isFinished}/>
         </Flex>
         <Box p='4'>
           {currentContent}

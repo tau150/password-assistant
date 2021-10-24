@@ -3,16 +3,16 @@ import PropTypes from 'prop-types'
 import { Badge, Box, Flex, Icon } from '@chakra-ui/react'
 import { Check } from 'react-feather'
 
-function getBgColor(activeStep, number){
+function getBgColor(activeStep, number, isFinished){
+  if((activeStep > number || isFinished)){
+    return "red.500"
+  }
   if(activeStep === number){
     return "brand.secondary"
   }
-  if(activeStep > number){
-    return "red.500"
-  }
   return 'brand.accent'
 }
-function StepsIndicator({stepsNumber, activeStep}){
+function StepsIndicator({stepsNumber, activeStep, isFinished}){
   const arrayOfSteps = Array.from(Array(stepsNumber), (_, idx) => idx + 1)
 
   return (
@@ -28,7 +28,7 @@ function StepsIndicator({stepsNumber, activeStep}){
               as='span'
               w='100px'
               h='5px'
-              bgColor={(number !== stepsNumber && activeStep > number ) ? 'red.500' : 'brand.accent'}
+              bgColor={((number !== stepsNumber && activeStep > number)) ? 'red.500' : 'brand.accent'}
             />)}
           <Badge
             fontSize='18px'
@@ -39,7 +39,7 @@ function StepsIndicator({stepsNumber, activeStep}){
             justifyContent='center'
             alignItems='center'
             color='white'
-            bgColor={getBgColor(activeStep, number)}
+            bgColor={getBgColor(activeStep, number, isFinished)}
             boxShadow={activeStep === number ? "lg" : 'initial'}
             role="status"
             aria-label={`${number} ${activeStep === number ? 'is active' : ''}`}
@@ -47,7 +47,7 @@ function StepsIndicator({stepsNumber, activeStep}){
             position='relative'
             zIndex={3}
             key={number}>
-              {activeStep > number ? <Icon as={Check} /> : number}
+              {(activeStep > number) || isFinished ? <Icon as={Check} /> : number}
           </Badge>
         </Box>))}
 
@@ -57,7 +57,8 @@ function StepsIndicator({stepsNumber, activeStep}){
 
 StepsIndicator.propTypes = {
   stepsNumber: PropTypes.number,
-  activeStep: PropTypes.number
+  activeStep: PropTypes.number,
+  isFinished: PropTypes.bool
 }
 
 export default StepsIndicator
