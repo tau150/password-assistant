@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { getByLabelText, getByText, screen } from '@testing-library/dom'
+import { screen } from '@testing-library/dom'
 import userEvent from '@testing-library/user-event';
-import { render } from '../../../test-helpers'
 
+import { render } from '../../../test-helpers'
 import Input from '../Input'
 
 

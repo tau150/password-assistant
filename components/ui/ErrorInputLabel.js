@@ -2,6 +2,8 @@ import * as React from 'react'
 import PropTypes from 'prop-types'
 import { Text } from '@chakra-ui/react'
 
+import { status } from '../../constants/ui'
+
 const colorsMap = {
   error: 'red.300',
   success: 'green.300',
@@ -16,6 +18,11 @@ function ErrorInputLabel({children, status}){
       {children}
     </Text>
   )
+}
+
+
+ErrorInputLabel.defaultProps = {
+  status: status.REGULAR
 }
 
 ErrorInputLabel.propTypes = {
