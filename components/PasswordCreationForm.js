@@ -92,7 +92,7 @@ function PasswordCreationForm({setPasswordResponse}){
           />
         </Text>
         <form>
-          <Stack mt={12} direction={["column", "row"]} spacing={['130px', 20]}>
+          <Stack mt={12} direction={["column", "row"]} spacing={['140px', 20]}>
             <Box w={['100%', '30%']}>
               <Input
                 shouldToggleShow={true}

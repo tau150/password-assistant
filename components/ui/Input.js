@@ -6,16 +6,18 @@ import { Info } from "react-feather"
 import { FormControl, FormLabel, FormHelperText, InputGroup, Input as CHInput, Tooltip, InputRightElement, Icon, Box, Text } from '@chakra-ui/react'
 
 import { validateInput, extractI18nConfig } from '../../utils/formValidation'
+import { status } from '../../constants/ui'
+import ErrorInputLabel from './ErrorInputLabel'
 
-function getLabelInfo(errors, validTypes, type) {
+function getStatus(errors, validTypes, type){
   if(!errors && !validTypes){
-    return {color: 'gray.500', aria: 'regular'}
+    return status.REGULAR
   }
   if(errors?.includes(type)){
-    return {color: 'red.300', aria: 'error'}
+    return status.ERROR
   }
   if(validTypes.includes(type)){
-    return {color: 'green.300', aria: 'success'}
+    return status.SUCCESS
   }
 }
 function Input(props){
@@ -90,9 +92,9 @@ function Input(props){
       {showErrorMessages && (
         <Box mt={2} px={2} py={1} bgColor='gray.100' position='absolute' data-testid='validations-container'>
           {validationReferences?.map(validation => (
-            <Text mt={1} fontSize={[12, 16]} role="status" aria-label={getLabelInfo(errors, validTypes, validation.type).aria}  color={getLabelInfo(errors, validTypes, validation.type).color} key={validation.type}>
+            <ErrorInputLabel key={validation.type} status={getStatus(errors, validTypes, validation.type)} >
               <FormattedMessage id={validation.i18nId} defaultMessage={validation.defaultMessage} values={{ [validation.i18nVariable]: validation.i18nValue }}/>
-            </Text>
+            </ErrorInputLabel>
             ))}
       </Box>
       )}

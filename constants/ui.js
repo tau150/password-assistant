@@ -5,5 +5,6 @@ export const buttonsVariants = {
 
 export const status = {
   SUCCESS: 'success',
-  ERROR: 'error'
+  ERROR: 'error',
+  REGULAR: 'regular'
 }
