@@ -12,20 +12,18 @@ const validationsMap = {
 }
 
 export function validateInput(value, validations){
-  const errors = []
-  const validTypes = []
+  return validations.reduce( (acc, validation) => {
 
-  validations.forEach( validation => {
-    if(!validationsMap[validation.type] || !validationsMap[validation.type](value, validation?.reference)){
-      errors.push(validation.type)
+    const noValidation = !validationsMap[validation.type]
+    const isNotValid = !validationsMap[validation.type]?.(value, validation?.reference)
+
+    if(noValidation || isNotValid){
+      const errors = acc.errors?.length > 0 ? [...acc.errors, validation.type] : [validation.type]
+      return {...acc, errors, isValid: false}
     }else{
-      validTypes.push(validation.type)
+      return {...acc, isValid: !acc.errors, validTypes: [...acc.validTypes, validation.type]}
     }
-  })
-
-  const isValid = errors.length === 0
-
-  return {isValid, errors: isValid ? null : errors, validTypes}
+  }, {errors: null, validTypes: [], isValid: false})
 }
 
 export function extractI18nConfig(validations){
